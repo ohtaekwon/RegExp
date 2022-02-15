@@ -98,3 +98,9 @@ ab? | b가 없거나 b와 일치
 \s|공백(Space, Tab 등)에 일치
 (?=)|앞쪽 일치(Lookahead)
 (?<=)|뒤쪽 일치(Lookbehind)
+
+<br>
+
+## 참고
+- https://heropy.blog/2018/10/28/regexp/
+- https://regexr.com/
