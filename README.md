@@ -101,6 +101,48 @@ ab? | b가 없거나 b와 일치
 
 <br>
 
+## 간단한 정규표현식
+
+```js
+const re = /a/         --a 가 있는 문자열
+const re = /a/i        --a 가 있는 문자열, 대소문자 구분 안함
+const re = /apple/    -- apple가 있는 문자열
+const re = /[a-z]/    -- a~z 사이의 모든 문자
+const re = /[a-zA-Z0-9]/    -- a~z, A~Z 0~9 사이의 모든 문자
+const re = /[a-z]|[0-9]/  -- a~z 혹은 0~9사이의 문자
+const re = /a|b|c/   --  a 혹은 b 혹은 c인 문자
+const re = /[^a-z]/  -- a~z까지의 문자가 아닌 문자("^" 부정)
+const re = /^[a-z]/  -- 문자의 처음이 a~z로 시작되는 문장
+const re = /[a-z]$/  -- 문자가 a~z로 끝남
+```
+
+## 상용 정규표현식
+
+```js
+// 특수문자 체크 정규식
+const regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g;
+
+// 모든 공백 체크 정규식
+const regExp = /\s/g;
+
+// 숫자만 체크 정규식
+const regExp = /[0-9]/g;
+
+// 이메일 체크 정규식
+const regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+// 핸드폰번호 정규식
+const regExp = /^\d{3}-\d{3,4}-\d{4}$/;
+
+// 일반 전화번호 정규식
+const regExp = /^\d{2,3}-\d{3,4}-\d{4}$/;
+
+// 아이디나 비밀번호 정규식
+const regExp = /^[a-z0-9_]{4,20}$/;
+
+// 휴대폰번호 체크 정규식
+const regExp = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
+```
 ## 참고
 - https://heropy.blog/2018/10/28/regexp/
 - https://regexr.com/
